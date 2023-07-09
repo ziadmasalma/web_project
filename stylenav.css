@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(173, 135, 78); /* Replace with the path to your image */
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    font-family: sans-serif, serif;
+  font-size: 16px;
+}
+
+nav {
+    align-self: flex-start;
+    margin-right: 150px;
+}
+form{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    text-align: center;
+    padding: 100px;
+    font-family: Courier New, monospace;
+  
+    
+}
+form input{
+    margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border: 2px solid black;
+  text-align: center;
+  padding: 100px;
+    
+}
+
+  table {
+    font-family: Verdana, sans-serif;
+    
+  }
+  
+  .metaphoric-button {
+    background-image: url('background.jpg'); /* Replace with the path to your desired image */
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #ccc; /* Replace with your desired border color */
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #fdf7f7; /* Replace with your desired text color */
+  }
+  
+  
+  .input {
+    background-color: blanchedalmond; /* Replace with your desired background color */
+  }
+  .input:focus{
+    background-attachment: fixed;
+    background-color: #73e311;
+  }
+label {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #c10d91; /* Replace with the desired border color */
+  border-radius: 5px;
+  color: #333; /* Replace with the desired label text color */
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: #d91f1f; /* Replace with the desired background color for the header */
+  color: #333; /* Replace with the desired text color for the header */
+  text-align: center; /* Center the text in the header */
+  padding: 8px;
+}
+
+td {
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: blanchedalmond; /* Replace with your desired background color for even rows */
+}
+
+tr:nth-child(odd) {
+  background-color: whitesmoke; /* Replace with your desired background color for odd rows */
+}

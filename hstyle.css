@@ -1,0 +1,44 @@
+header {
+    width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+  
+}
+
+.header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.header-section.left {
+    text-align: center;
+   
+}
+
+.header-section.middle {
+    text-align: center;
+}
+
+.header-section.right {
+    text-align: center; 
+}
+.header-section.right a{
+    margin-left: 10px;
+}
+figure {
+    position: relative;
+    display: inline-block;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+ figcaption{
+    color: brown;
+ }
