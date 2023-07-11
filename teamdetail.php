@@ -43,7 +43,7 @@
             <br>
             <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
                 <label>Player Name:</label> 
-                <input type="text" name="playername" class="input">
+                <input type="text" name="playername" class="input" required>
                 <br>
                 <input type="submit" value="add new player" name="add" class="metaphoric-button">
             </form>
