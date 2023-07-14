@@ -10,7 +10,7 @@
   <header>
     <?php include('header.php'); ?>
   </header>
- 
+
   <main>
     <div class="content" style="margin-left:400px">
       <?php
@@ -26,26 +26,26 @@
           $username = $_POST["username"];
           $password = $_POST["password"];
           $email = $_POST["email"];
-          $confrim=$_POST['confrim'];
-          if($confrim==$password){
-          $sql = "SELECT * FROM users WHERE email='$email'";
-          $stm = $pdo->prepare($sql);
-          $stm->execute();
-          if ($stm->rowCount() > 0) {
-            echo "the email is used try another one";
-          } else {
-            $sql = "INSERT INTO users (username, password, email)
-    VALUES ('$username', '$password', '$email')";
+          $confrim = $_POST['confrim'];
+          if ($confrim == $password) {
+            $sql = "SELECT * FROM users WHERE email='$email'";
             $stm = $pdo->prepare($sql);
             $stm->execute();
             if ($stm->rowCount() > 0) {
-              echo "the registration is done";
+              echo "the email is used try another one";
+            } else {
+              $sql = "INSERT INTO users (username, password, email)
+    VALUES ('$username', '$password', '$email')";
+              $stm = $pdo->prepare($sql);
+              $stm->execute();
+              if ($stm->rowCount() > 0) {
+                echo "the registration is done";
+              }
             }
+          } else {
+            echo "the password not matched";
           }
-        }else{
-            echo"the password not matched";
-        } 
-             } elseif (isset($_POST["login"])) {
+        } elseif (isset($_POST["login"])) {
           $email = $_POST["email"];
           $password = $_POST['password'];
           $sql = "SELECT * FROM users WHERE email='$email' and password='$password'";
@@ -72,32 +72,32 @@
 
       ?>
       <h2>login</h2>
-      <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>" >
-       <label>Email:</label>
-       <input type="email" name="email" class="input" required>
-       <br>
+      <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
+        <label>Email:</label>
+        <input type="email" name="email" class="input" required>
+        <br>
         <label>Password:</label>
         <input type="password" name="password" class="input" required>
         <br>
-        <input type="submit" VALUE="login" name="login" class="metaphoric-button"  >
+        <input type="submit" VALUE="login" name="login" class="metaphoric-button">
       </form>
       <h2>Registration Form</h2>
-      <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>" >
-      <label >Username:</label>
-        <input type="text" name="username"  class="input" required>
+      <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
+        <label>Username:</label>
+        <input type="text" name="username" class="input" required>
         <br>
-        <label >Email:</label>
+        <label>Email:</label>
         <input type="email" name="email" class="input" required>
         <br>
-        <label >Password:</label>
-         <input type="password" name="password" class="input" required>
-         <br>
-         <label >Confrim PW:</label>
-        <input type="password" name="confrim"  class="input" required>
+        <label>Password:</label>
+        <input type="password" name="password" class="input" required>
         <br>
-  
-        <input type="submit" VALUE="Registration" name="Registration" class="metaphoric-button" >
-      
+        <label>Confrim PW:</label>
+        <input type="password" name="confrim" class="input" required>
+        <br>
+
+        <input type="submit" VALUE="Registration" name="Registration" class="metaphoric-button">
+
       </form>
 
     </div>

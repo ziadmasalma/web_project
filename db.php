@@ -25,7 +25,7 @@ function html_header()
                 NEW_WIN = window.open("", "RecordViewer");
                 NEW_WIN.location.href = url;
             }
-       //-->
+           //-->
         </script>
         <title>User Record Viewer</title>
     </head>

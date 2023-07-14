@@ -21,13 +21,13 @@
             <h1>Create New Team</h1>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <label>Team Name:</label>
-                <input type="text" id="name" name="name"class="input" required>
+                <input type="text" id="name" name="name" class="input" required>
                 <br>
                 <label>Skill Level (1-5):</label>
-                <input type="number" id="skill_level" name="skill_level"class="input" min="1" max="5" required>
+                <input type="number" id="skill_level" name="skill_level" class="input" min="1" max="5" required>
                 <br>
                 <label>Game Day:</label>
-                <input type="date" id="game_day" name="game_day"class="input" required>
+                <input type="date" id="game_day" name="game_day" class="input" required>
                 <br>
                 <input type="submit" value="Create Team" Name="create" class="metaphoric-button">
             </form>
